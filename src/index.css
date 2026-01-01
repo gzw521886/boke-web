@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-bg-primary text-text-primary;
+    font-family: 'JetBrains Mono', 'Consolas', 'Monaco', monospace;
+  }
+
+  * {
+    @apply transition-colors duration-200;
+  }
+}
+
+@layer components {
+  .border-retro {
+    @apply border border-border;
+  }
+
+  .card {
+    @apply bg-bg-secondary border-retro rounded-none p-6;
+  }
+
+  .link-accent {
+    @apply text-accent hover:text-accent-dim cursor-pointer;
+  }
+
+  .btn {
+    @apply px-4 py-2 border-retro bg-bg-tertiary hover:bg-bg-secondary hover:border-accent cursor-pointer;
+  }
+}
+
+/* Markdown 编辑器黑色主题样式 */
+.markdown-editor .EasyMDEContainer {
+  background-color: #1a1a1a;
+}
+
+.markdown-editor .EasyMDEContainer .CodeMirror {
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+  border: 1px solid #333333;
+  font-family: 'JetBrains Mono', 'Consolas', 'Monaco', monospace;
+  height: 500px;
+}
+
+.markdown-editor .editor-toolbar {
+  background-color: #2a2a2a;
+  border: 1px solid #333333;
+  border-bottom: none;
+}
+
+.markdown-editor .editor-toolbar button {
+  color: #a0a0a0 !important;
+}
+
+.markdown-editor .editor-toolbar button:hover,
+.markdown-editor .editor-toolbar button.active {
+  background-color: #1a1a1a;
+  border-color: #00ff88;
+  color: #00ff88 !important;
+}
+
+.markdown-editor .editor-toolbar i.separator {
+  border-left: 1px solid #333333;
+  border-right: 1px solid #333333;
+}
+
+.markdown-editor .CodeMirror-cursor {
+  border-left: 1px solid #00ff88;
+}
+
+.markdown-editor .CodeMirror-selected {
+  background-color: #2a2a2a;
+}
+
+.markdown-editor .editor-preview,
+.markdown-editor .editor-preview-side {
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+  border: 1px solid #333333;
+}
+
+.markdown-editor .editor-preview h1,
+.markdown-editor .editor-preview-side h1 {
+  color: #00ff88;
+  border-bottom: 1px solid #333333;
+}
+
+.markdown-editor .editor-preview h2,
+.markdown-editor .editor-preview-side h2 {
+  color: #e0e0e0;
+  border-bottom: 1px solid #333333;
+}
+
+.markdown-editor .editor-preview code,
+.markdown-editor .editor-preview-side code {
+  background-color: #2a2a2a;
+  color: #00ff88;
+  border: 1px solid #333333;
+}
+
+.markdown-editor .editor-preview pre,
+.markdown-editor .editor-preview-side pre {
+  background-color: #2a2a2a;
+  border: 1px solid #333333;
+}
+
+.markdown-editor .editor-preview a,
+.markdown-editor .editor-preview-side a {
+  color: #00ff88;
+}
+
+.markdown-editor .editor-statusbar {
+  color: #a0a0a0;
+  border: 1px solid #333333;
+  border-top: none;
+}
+
+.markdown-editor .CodeMirror-scroll {
+  min-height: 500px;
+}
