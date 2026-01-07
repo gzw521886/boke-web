@@ -71,7 +71,7 @@ export default function CreatePost() {
     return {
       spellChecker: false,
       placeholder: '开始写作...\n\n支持 Markdown 语法',
-      status: ['lines', 'words', 'cursor'],
+      status: ['lines', 'words', 'cursor'] as any,
       toolbar: [
         'bold',
         'italic',
@@ -107,7 +107,7 @@ export default function CreatePost() {
         'fullscreen',
         '|',
         'guide',
-      ],
+      ] as any,
     };
   }, []);
 

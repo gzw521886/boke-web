@@ -64,3 +64,9 @@ export interface LoginResponse {
   access_token: string;
   token_type: string;
 }
+
+// 标签类型
+export interface Tag {
+  name: string;
+  count: number;
+}

@@ -1,6 +1,5 @@
 import { useMemo } from 'react';
 import { useSearchParams, Link } from 'react-router-dom';
-import PostCard from '../components/PostCard';
 import { posts } from '../data/posts';
 import { Tag } from '../types';
 
@@ -47,6 +46,8 @@ export default function TagsPage() {
           >
             全部 ({posts.length})
           </Link>
+          
+          <Link to="/tags" className="px-4 py-2 border-retro hover:bg-bg-tertiary hover:border-accent text-text-primary">添加分类</Link>
 
           {tags.map(tag => (
             <Link
@@ -72,9 +73,40 @@ export default function TagsPage() {
           </span>
         </h2>
 
-        {filteredPosts.map(post => (
-          <PostCard key={post.id} post={post} />
-        ))}
+        <div className="space-y-6">
+          {filteredPosts.map(post => (
+            <article key={post.id} className="card hover:border-accent">
+              <Link to={`/post/${post.id}`}>
+                <h2 className="text-xl font-bold text-text-primary mb-3 hover:text-accent">
+                  {post.title}
+                </h2>
+              </Link>
+
+              <p className="text-text-secondary mb-4 leading-relaxed">
+                {post.excerpt}
+              </p>
+
+              <div className="flex items-center justify-between text-sm">
+                <div className="flex gap-2">
+                  {post.tags.map(tag => (
+                    <Link
+                      key={tag}
+                      to={`/tags?tag=${tag}`}
+                      className="px-2 py-1 border-retro text-accent hover:bg-bg-tertiary"
+                    >
+                      #{tag}
+                    </Link>
+                  ))}
+                </div>
+
+                <div className="flex gap-4 text-text-secondary">
+                  <span>{post.date}</span>
+                  <span>{post.readTime} min</span>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
       </div>
     </div>
   );

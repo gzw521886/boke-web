@@ -40,7 +40,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   };
 
   const register = async (data: UserCreate) => {
-    const newUser = await authApi.register(data);
+    await authApi.register(data);
 
     // 注册成功后自动登录
     await login(data.username, data.password);

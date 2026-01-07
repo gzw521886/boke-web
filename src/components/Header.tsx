@@ -9,7 +9,7 @@ export default function Header() {
       <div className="max-w-4xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="text-2xl font-bold text-accent hover:text-accent-dim">
-            {'> '}博客_
+            三三笔记
           </Link>
 
           <nav className="flex gap-6 items-center">
@@ -23,10 +23,10 @@ export default function Header() {
             {isAuthenticated ? (
               <>
                 <Link to="/create" className="link-accent">
-                  写文章
+                  写笔记
                 </Link>
                 <Link to="/my-posts" className="link-accent">
-                  我的文章
+                  我的笔记
                 </Link>
                 <span className="text-text-secondary">
                   {user?.nickname || user?.username}

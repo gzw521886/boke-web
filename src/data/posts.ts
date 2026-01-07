@@ -1,8 +1,17 @@
-import { Post } from '../types';
+// 本地文章类型（包含额外的字段，用于静态数据）
+interface LocalPost {
+  id: number;
+  title: string;
+  excerpt: string;
+  content: string;
+  date: string;
+  tags: string[];
+  readTime: number;
+}
 
-export const posts: Post[] = [
+export const posts: LocalPost[] = [
   {
-    id: '1',
+    id: 1,
     title: 'React Hooks 深入理解',
     excerpt: '深入探讨 React Hooks 的原理和最佳实践，从 useState 到自定义 Hook 的完整指南。',
     content: `# React Hooks 深入理解
@@ -60,7 +69,7 @@ Hooks 让组件逻辑更加清晰，代码更易复用。`,
     readTime: 5
   },
   {
-    id: '2',
+    id: 2,
     title: 'TypeScript 高级类型技巧',
     excerpt: '掌握 TypeScript 的高级类型系统，提升代码类型安全性和开发效率。',
     content: `# TypeScript 高级类型技巧
@@ -102,7 +111,7 @@ type Readonly<T> = {
     readTime: 7
   },
   {
-    id: '3',
+    id: 3,
     title: 'Vite 构建工具完全指南',
     excerpt: '探索 Vite 的核心特性和优化技巧，打造极速开发体验。',
     content: `# Vite 构建工具完全指南
@@ -147,7 +156,7 @@ Vite 让前端开发更加高效愉悦！`,
     readTime: 6
   },
   {
-    id: '4',
+    id: 4,
     title: 'CSS Grid 布局完整教程',
     excerpt: '从基础到进阶，全面掌握 CSS Grid 布局系统，创建复杂的网页布局。',
     content: `# CSS Grid 布局完整教程
@@ -193,7 +202,7 @@ Grid 让复杂布局变得简单直观。`,
     readTime: 8
   },
   {
-    id: '5',
+    id: 5,
     title: 'Web 性能优化最佳实践',
     excerpt: '从加载速度到运行时性能，全方位提升 Web 应用的用户体验。',
     content: `# Web 性能优化最佳实践

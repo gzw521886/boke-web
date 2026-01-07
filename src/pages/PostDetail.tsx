@@ -101,10 +101,12 @@ export default function PostDetail() {
               h2: ({node, ...props}) => <h2 className="text-xl font-bold mt-6 mb-3 text-text-primary" {...props} />,
               h3: ({node, ...props}) => <h3 className="text-lg font-bold mt-4 mb-2 text-text-primary" {...props} />,
               p: ({node, ...props}) => <p className="mb-4 text-text-secondary leading-relaxed" {...props} />,
-              code: ({node, inline, ...props}) =>
-                inline ?
+              code: ({node, className, ...props}) => {
+                const isInline = !className;
+                return isInline ?
                   <code className="px-2 py-1 bg-bg-tertiary text-accent border border-border rounded-sm" {...props} /> :
-                  <code className="block p-4 bg-bg-tertiary text-text-primary border border-border overflow-x-auto my-4" {...props} />,
+                  <code className="block p-4 bg-bg-tertiary text-text-primary border border-border overflow-x-auto my-4" {...props} />;
+              },
               ul: ({node, ...props}) => <ul className="list-disc list-inside mb-4 text-text-secondary" {...props} />,
               ol: ({node, ...props}) => <ol className="list-decimal list-inside mb-4 text-text-secondary" {...props} />,
               a: ({node, ...props}) => <a className="text-accent hover:text-accent-dim underline" {...props} />,
