@@ -1,0 +1,15 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect x="32" y="32" width="448" height="448" rx="80" fill="#1F3A5F"/>
+
+  <!-- Notebook -->
+  <rect x="140" y="120" width="232" height="272" rx="20" fill="#FFFFFF"/>
+
+  <!-- Folded corner -->
+  <polygon points="332,120 372,120 372,160" fill="#D9E2EC"/>
+
+  <!-- Three lines (三三) -->
+  <rect x="170" y="190" width="172" height="16" rx="8" fill="#1F3A5F"/>
+  <rect x="170" y="230" width="172" height="16" rx="8" fill="#1F3A5F"/>
+  <rect x="170" y="270" width="172" height="16" rx="8" fill="#1F3A5F"/>
+</svg>
